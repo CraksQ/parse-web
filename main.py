@@ -33,7 +33,7 @@ headers = {
 }
 page = requests.get(base_url, headers=headers)
 
-
+soup = BeautifulSoup(page.text, 'html.parser')
 quotes = []
 scrape_page(soup, quotes)
 #получение страницы и инициализация soup
